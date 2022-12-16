@@ -1,0 +1,292 @@
+@use './variables' as *;
+@use './mixins' as *;
+@import '~bootstrap/scss/bootstrap';
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.container2 {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 1rem;
+    @include dflex
+}
+
+ul {
+    @include dflex;
+    margin-left: 300px;
+
+    li {
+        margin-right: 25px;
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: bold;
+
+        a {
+            text-decoration: none;
+            color: $blacktext;
+            height: 50px;
+            padding-bottom: 47px;
+
+            &.active,
+            &:hover {
+                color: $bluetext;
+                border-bottom: 5px solid $bluetext;
+            }
+        }
+    }
+}
+
+.jumbo {
+    background-image: url('/resources/img/jumbotron.jpg');
+    background-size: cover;
+    height: 45vh;
+    background-repeat: no-repeat;
+    position: relative;
+
+    button {
+        position: absolute;
+        left: 200px;
+        bottom: -30px;
+        border: none;
+        background-color: $bluetext;
+        height: 55px;
+        padding: 10px;
+
+        &:hover {
+            background-color: rgb(9, 111, 206);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.8em;
+        }
+    }
+}
+
+.bg-main {
+    background-color: rgb(28, 28, 28);
+}
+
+.row {
+    display: flex !important;
+    flex-flow: row wrap !important;
+
+    .card {
+        background-color: rgb(28, 28, 28);
+        border: none;
+        margin-top: 50px;
+        height: 400px;
+        padding: 10px;
+        width: calc(100% / 6);
+
+        .cardbox {
+            height: 300px;
+            overflow-y: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        div {
+            h4 {
+                font-size: 1rem;
+                text-transform: uppercase;
+                color: rgb(254, 252, 241);
+            }
+        }
+    }
+}
+
+.btn {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+
+    button {
+        background-color: $bluetext;
+        height: 40px;
+        width: 200px;
+        padding: 10px;
+        border: none;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1em;
+        margin-bottom: 30px;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: rgb(9, 111, 206);
+        }
+    }
+}
+
+.container3 {
+    @include dflex;
+    background-color: $bluetext;
+    max-width: 100%;
+    padding: 4.5rem;
+    margin: 0 auto;
+
+
+    ul {
+        list-style: none;
+        @include dflex;
+        padding: 0 30px;
+
+        li {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            @include dflex;
+            font-size: 0.9rem;
+
+            .ico-img {
+                height: 6vh;
+            }
+
+            span {
+                color: white;
+                margin-left: 10px;
+                margin-right: 50px;
+            }
+        }
+    }
+}
+
+.bg-section {
+    background-image: url('/resources/img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    .container4 {
+        @include dflex;
+        height: 55vh;
+        justify-content: space-between;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 1rem;
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(100%/3);
+
+            .list:last-child {
+                margin-top: -50px;
+            }
+
+            h3 {
+                color: white;
+                text-transform: uppercase;
+                margin-bottom: 13px;
+            }
+
+            ul {
+                list-style: none;
+                margin-right: 30px;
+
+                li a {
+                    text-decoration: none;
+                    color: rgb(152, 150, 149);
+                    font-size: 0.8rem;
+                    margin-bottom: 4px;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .containerr {
+
+        p {
+            color: $grey;
+            font-size: 0.8rem;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+    }
+}
+
+.section-social {
+    background-color: rgb(48, 48, 48);
+
+    .container5 {
+        @include dflex;
+        height: 100px;
+        justify-content: space-between;
+
+        button {
+            border: 3px solid $bluetext;
+            background-color: rgb(48, 48, 48);
+            padding: 15px;
+            font-size: 1rem;
+
+            &:hover {
+                background-color: $bluetext;
+            }
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: white;
+            }
+        }
+
+        .social-img {
+            @include dflex;
+
+            span {
+                color: $bluetext;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+            }
+
+            span,
+            img {
+                margin-right: 20px;
+            }
+
+            a img:hover {
+                background-color: white;
+                border-radius: 100%;
+            }
+        }
+    }
+}
