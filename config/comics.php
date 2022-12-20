@@ -218,55 +218,55 @@ return [
 
     'navbar' => [
         [
-            "text" => "Characters",
+            "text" => "characters",
+            "url" => "characters",
+            "active" => false,
+        ],
+        [
+            "text" => "comics",
             "url" => "comics",
             "active" => false,
         ],
         [
-            "text" => "Comics",
-            "url" => "comics",
-            "active" => true,
-        ],
-        [
-            "text" => "Movies",
-            "url" => "comics",
+            "text" => "movies",
+            "url" => "movies",
             "active" => false,
         ],
         [
-            "text" => "TV",
-            "url" => "comics",
+            "text" => "tv",
+            "url" => "tv",
             "active" => false,
         ],
         [
-            "text" => "Games",
-            "url" => "comics",
+            "text" => "games",
+            "url" => "games",
             "active" => false,
         ],
         [
-            "text" => "Collectibles",
-            "url" => "comics",
+            "text" => "collectibles",
+            "url" => "collectibles",
             "active" => false,
         ],
         [
-            "text" => "Videos",
-            "url" => "comics",
+            "text" => "videos",
+            "url" => "videos",
             "active" => false,
         ],
         [
-            "text" => "Fans",
-            "url" => "comics",
+            "text" => "fans",
+            "url" => "fans",
             "active" => false,
         ],
         [
-            "text" => "News",
-            "url" => "comics",
+            "text" => "news",
+            "url" => "news",
             "active" => false,
         ],
         [
-            "text" => "Shop",
-            "url" => "comics",
+            "text" => "shop",
+            "url" => "shop",
             "active" => false,
-        ]
+        ],
     ],
 
     "bluesection" => [

@@ -4,39 +4,66 @@ $blue = config('comics.bluesection');
 
 @extends('layout.app')
 
-@section('content')
+@section('page-title', 'Laravel Comics - Comics')
 
-<div class="jumbo">
-            <button><a href="#nogo">current series</a></button>
-        </div>
-        <div class="bg-main">
-            <div class="container2">
-                <div class="row">
-                    @foreach ($comics as $comic)
-                    <div class="card">
-                        <div class="cardbox">
-                            <img src="{{$comic['thumb']}}" alt="">
+@section('content')
+    <div class="main">
+        <span>current series</span>
+        <div class="container container-comics">
+            <div class="comics-main">
+                <div class="row d-flex flex-wrap">
+                    @foreach ($comics as $key => $comic)
+                    <div class="my-card">
+                        <div class="img-box">
+                            <a href="{{'/single-page' . $key}}">
+                                <img src="{{$comic['thumb']}}" alt="">
+                            </a>
                         </div>
-                        <div>
-                            <h4>{{$comic['series']}}</h4>
-                        </div>
+                        <p class="text-white">{{$comic['series']}}</p>
                     </div>
                     @endforeach
                 </div>
             </div>
-            <div class="btn">
-                <button><a href="#nogo">load more</a></button>
-            </div>
         </div>
-        <div class="container3">
-            <ul>
-                @foreach ($blue as $item)
+        <div class="btn-box">
+            <a href="#nogo"><button>Load more</button></a>
+        </div>
+    </div>
+    <section class="blue-banner">
+        <div class="container">
+            <ul class="d-flex list-unstyled justify-content-between align-items-center m-0">
                 <li>
-                    <img class="ico-img" src="{{Vite::asset('resources/img/') .$item['img']}}">
-                    <span>{{$item['text']}}</span>
+                    <a href="">
+                        <img src="{{ Vite::asset('/resources/img/buy.png') }}" alt="" class="logo-blue">
+                        <span>Digital Comics</span>
+                    </a>
                 </li>
-                @endforeach
+                <li>
+                    <a href="">
+                        <img src="{{ Vite::asset('/resources/img/buy-comics-merchandise.png') }}" alt="" class="logo-blue">
+                        <span>Dc Merchandise</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="{{ Vite::asset('/resources/img/buy-comics-subscriptions.png') }}" alt="" class="logo-blue">
+                        <span>Subscription</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="{{ Vite::asset('/resources/img/buy-comics-shop-locator.png') }}" alt="" class="logo-blue">
+                        <span>Comic Shop Locator</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="{{ Vite::asset('/resources/img/buy-dc-power-visa.svg') }}" alt="" class="logo-blue-svg">
+                        <span>Dc Power Visa</span>
+                    </a>
+                </li>
             </ul>
-            </div>
-        @endsection
+        </div>
+    </section>
+@endsection
 
